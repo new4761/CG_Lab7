@@ -10,7 +10,7 @@ class Lab7_60050143 extends JPanel {
         JFrame f = new JFrame();
         f.add(m);
         f.setTitle("Lab7");
-        f.setBackground(Color.WHITE);
+      //  f.setBackground(Color.WHITE);
         f.setSize(600, 600);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
@@ -21,8 +21,12 @@ class Lab7_60050143 extends JPanel {
         Graphics2D g2 = (Graphics2D) g;
         // rotation
         double r = Math.toRadians(30);
-        g2.setTransform(new AffineTransform(Math.cos(r), Math.sin(r), 200, -Math.sin(r), Math.cos(r), 200));
+      //double r = 30.00;
+        g2.setTransform(new AffineTransform(Math.cos(r),-Math.sin(r),  Math.sin(r), Math.cos(r) ,100, 100));
         g2.drawRect(200, 200, 200, 200);
+    //    g2.setTransform(new AffineTransform(1,0,0,1,100,100));
+    g2.setTransform(new AffineTransform(2,0,0,2,-50,50));
+        g2.drawRect(0, 0, 200, 200);
 
     }
 
